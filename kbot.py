@@ -1,9 +1,3 @@
-aqivar = "100.789"
-templar = "32.767"
-
-
-
-
 import telebot
 import numpy as np
 import matplotlib.pyplot as plt
@@ -31,7 +25,7 @@ def verify_temp():
     temp=dataset.iloc[:, 2].values
     y = dataset.iloc[:, 1].values
 
-    fl=0
+    
     for i in range(len(y)):
         #turn to today's date
         change=list(y[i])
@@ -44,10 +38,7 @@ def verify_temp():
             fl=1
             print(temp[i])
             return round(temp[i],2)
-    if(fl==0):
-        print("huh")
-        return templar
-
+    
 def verify_aqi():
     now = datetime.now()
     dateof=str(now)
@@ -63,7 +54,7 @@ def verify_aqi():
     aqi=dataset.iloc[:, 2].values
     y = dataset.iloc[:, 1].values
 
-    fl=0
+    
     for i in range(len(y)):
         #turn to aaj ka date
         change=list(y[i])
@@ -76,10 +67,7 @@ def verify_aqi():
             fl=1
             print(aqi[i])
             return round(aqi[i], 2)
-    if(fl==0):
-        # print("huh")
-        return aqivar
-
+    i
 def verify_water():
     dataset = pd.read_csv('water_result.csv')
     bod=dataset.iloc[:, 2].values
