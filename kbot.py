@@ -18,7 +18,6 @@ def verify_temp():
     datalist=[]
     datalist[:0]=data
     data=''.join(datalist[0:])
-    print(data)
 
     # TAKING DATA FROM RESULT
     dataset = pd.read_csv('temp_result.csv')
@@ -34,9 +33,6 @@ def verify_temp():
         y_result=''.join(change)
 
         if(data==y_result):
-            print("yaa")
-            fl=1
-            print(temp[i])
             return round(temp[i],2)
     
 def verify_aqi():
@@ -47,7 +43,7 @@ def verify_aqi():
     datalist=[]
     datalist[:0]=data
     data=''.join(datalist[0:])
-    print(data)
+    
 
     # TAKING DATA FROM RESULT
     dataset = pd.read_csv('air_result.csv')
@@ -56,18 +52,15 @@ def verify_aqi():
 
     
     for i in range(len(y)):
-        #turn to aaj ka date
+        #turn to today's date
         change=list(y[i])
         change[2]='2'
         change[3]='0'
         y_result=''.join(change)
 
         if(data==y_result):
-            print("yaa")
-            fl=1
-            print(aqi[i])
             return round(aqi[i], 2)
-    i
+    
 def verify_water():
     dataset = pd.read_csv('water_result.csv')
     bod=dataset.iloc[:, 2].values
