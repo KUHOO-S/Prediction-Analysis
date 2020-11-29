@@ -3,6 +3,7 @@
 
 
 ChatBot system with the following functionalities. It will provide three details, weather prediction, air quality index prediction and water quality prediction. Predictive analytics plays a central role in deriving value from the real-time data of IoT industry. Many companies rely on this predictive analysis of their assets to get a sustainable market edge. Chatbots are of the more advantageous applications of this. While being complex and incorporating AI, they also give the ease of implementation and a great user experience.
+
 The dataset for this project is taken from [data.gov.in](https://data.gov.in) .The website provides real-time dataset through APIs and also dataset in .csv format. For implementation purposes , all datasets have been trimmed to a time frame of one year (2019-2020).
 
 
